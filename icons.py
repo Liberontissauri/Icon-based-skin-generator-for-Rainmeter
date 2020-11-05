@@ -1,5 +1,5 @@
 import os
-from shutil import copy2
+from shutil import copy2 #This module helps in automating process of copying and removal of files and directories
 
 def geticonpath(icon_name):
     curD = os.getcwd()
@@ -9,7 +9,7 @@ def listicons():
 
     return os.listdir(os.getcwd() + "\icon")
 
-def createfolderstruct(main_folder_name):
+def createfolderstruct(main_folder_name):  #it create a folder named @Resources
     os.mkdir(main_folder_name)
     os.mkdir(os.getcwd() +"\{}".format(main_folder_name)+"\@Resources")
     for icon in listicons():
